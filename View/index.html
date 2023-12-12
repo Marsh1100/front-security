@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="../Styles/styles.css">
+
+    <link rel="shortcut icon" href="img/signo-de-interrogacion.ico">
+    
+    <title>Security</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="display: flex;justify-content: space-around;">
+        <div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Clientes
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#registrarCliente">Registrar</a></li>
+                    <li><a class="dropdown-item" href="#">Listar</a></li>
+                    
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Empleados
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Registrar</a></li>
+                    <li><a class="dropdown-item" href="#">Listar</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Programación</a></li>
+                    </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Turnos</a>
+                    </li>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/128/3237/3237472.png" alt="usuario.png" style="height: 5vh;">
+        </div>
+    </nav>
+
+    <main>
+
+        <!--Inicio-->
+        <section class="inicio">
+            <table class="table">
+                <thead class="table-primary">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Cédula Cliente</th>
+                    <th scope="col">Empleado</th>
+                    <th scope="col">Fecha de incio</th>
+                    <th scope="col">Fecha de incio</th>
+                    <th scope="col">Estado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>111111</td>
+                    <td>Fabian Muñoz</td>
+                    <td>26-11-2023</td>
+                    <td>26-11-2024</td>
+                    <td>Activo</td>
+                  </tr>
+                </tbody>
+              </table>
+        </section>
+
+    </main>
+
+
+    <!-- Modal registrar cliente -->
+    <div class="modal fade modal-dialog modal-dialog-centered" id="registrarCliente" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" >
+            <h1 class="modal-title fs-4" id="exampleModalLabel">Registrar cliente</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="cliente-form" class="form">
+                    <label for="Id">Número de identificación:</label>
+                    <input id="Id" class="form-control form-control-sm" type="text" placeholder="10000000" aria-label=".form-control-sm example">
+                    <label for="nombre-cliente">Nombre:</label>
+                    <input id="nombre-cliente" class="form-control form-control-sm" type="text" placeholder="Nombre" aria-label=".form-control-sm example">
+
+                    <label for="paises">Selecciona pais:</label>
+                    <select id="paises" class="form-select" required>
+                        <option selected>Pais</option>
+                        <option value="0">Colombia</option>
+                        <option value="1">Chile</option>
+                        <option value="2">Perú</option>
+                        <!--Se llena dinámicamente-->
+                    </select>
+
+                </form>
+
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <footer>
+        Margie Bocanegra Agudelo®
+    </footer>
+
+
+
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!--SweetAlert2-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--JavaScript-->
+    
+</body>
+</html>
